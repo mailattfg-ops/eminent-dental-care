@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-navy: #1B2A4A;
+  --color-gold: #B8922A;
+  --color-gold-light: #D4AF37;
+  --color-cream: #FAF9F6; /* Premium Alabaster White */
+  --color-white: #FFFFFF;
+  --color-slate: #3D4F6B;
+}
+
+body {
+  @apply bg-brand-cream text-brand-slate antialiased selection:bg-brand-gold/20 selection:text-brand-navy;
+  font-family: var(--font-inter), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), var(--font-inter), serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+  .font-serif {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+  
+  /* Premium Glassmorphism */
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(27,42,74,0.05)];
+  }
+  
+  /* Hairline Gold Border */
+  .border-gold-hairline {
+    @apply border border-brand-gold/10 hover:border-brand-gold/30 transition-colors duration-500;
+  }
+  
+  /* Premium Shadow */
+  .shadow-premium {
+    @apply shadow-[0_20px_60px_-15px_rgba(27,42,74,0.08)] hover:shadow-[0_25px_70px_-10px_rgba(184,146,42,0.12)];
+  }
+}
+
+@layer base {
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-gold ring-offset-2 transition-all;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
