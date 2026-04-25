@@ -23,7 +23,7 @@ export const navLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
   { name: "About Us", href: "/about" },
-  { name: "Our Doctor", href: "/doctors" },
+  { name: "Our Doctors", href: "/doctors" },
   { name: "Contact Us", href: "/contact" },
 ];
 

@@ -13,13 +13,6 @@ const bentoConfig = [
         layout: "tall",
     },
     {
-        title: "Sterilization",
-        desc: "Advanced hygiene protocols.",
-        span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1",
-        image: "/Images/teeth_cleaning.webp",
-        layout: "standard",
-    },
-    {
         title: "Comfort First",
         desc: "Patient-friendly environment.",
         span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1",
@@ -53,6 +46,13 @@ const bentoConfig = [
         span: "col-span-1 md:col-span-2 lg:col-span-3 row-span-1",
         image: "/Images/dental_hero_bg.webp",
         layout: "wide",
+    },
+    {
+        title: "Sterilization",
+        desc: "Advanced hygiene protocols.",
+        span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1",
+        image: "/Images/teeth_cleaning.webp",
+        layout: "standard",
     },
 ];
 
