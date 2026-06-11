@@ -35,16 +35,20 @@ export default function Navbar() {
             <div className="w-full flex items-center justify-between">
 
                 {/* LEFT — Logo only */}
-                <Link href="/" className="shrink-0" onClick={() => setIsOpen(false)}>
+                <a
+                    href="/"
+                    className="shrink-0 block w-16 h-16 relative z-50 pointer-events-auto"
+                    onClick={() => setIsOpen(false)}
+                >
                     <Image
                         src="/Images/logo.svg"
                         alt="Eminent Dental Care Logo"
                         width={64}
                         height={64}
-                        className="object-contain w-16 h-16"
+                        className="object-contain w-16 h-16 cursor-pointer"
                         priority
                     />
-                </Link>
+                </a>
 
                 {/* CENTER — Nav Links */}
                 <ul className="hidden lg:flex items-center gap-10">
