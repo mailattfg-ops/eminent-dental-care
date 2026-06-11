@@ -77,10 +77,10 @@ export default function DoctorsPage() {
                                     initial={{ opacity: 0, y: 40 }}
                                     animate={gridInView ? { opacity: 1, y: 0 } : {}}
                                     transition={{ duration: 0.6, delay: i * 0.15 }}
-                                    className="bg-white rounded-2xl overflow-hidden border border-[#e8e4dc] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
+                                    className="flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-[#e8e4dc] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
                                 >
                                     {/* Photo */}
-                                    <div className="relative h-72 overflow-hidden bg-gray-100">
+                                    <div className="relative h-72 overflow-hidden bg-gray-100 shrink-0">
                                         <Image
                                             src={doctor.image}
                                             alt={doctor.name}
@@ -104,59 +104,63 @@ export default function DoctorsPage() {
                                     </div>
 
                                     {/* Info */}
-                                    <div className="p-6">
-                                        <p className="text-[#c9a84c] text-[10px] tracking-[0.15em] uppercase font-semibold mb-1">
-                                            {doctor.role}
-                                        </p>
-                                        <h3 className="font-serif font-bold text-[#1a1a1a] text-[22px] leading-tight mb-1">
-                                            {doctor.name}
-                                        </h3>
-                                        <p className="text-[#888] text-[13px] mb-4">
-                                            {[
-                                                doctor.qualification,
-                                                doctor.experience,
-                                                doctor.regNo ? `Reg. #${doctor.regNo}` : null
-                                            ].filter(Boolean).join(" · ")}
-                                        </p>
+                                    <div className="p-6 flex-1 flex flex-col justify-between">
+                                        <div>
+                                            <p className="text-[#c9a84c] text-[10px] tracking-[0.15em] uppercase font-semibold mb-1">
+                                                {doctor.role}
+                                            </p>
+                                            <h3 className="font-serif font-bold text-[#1a1a1a] text-[22px] leading-tight mb-1">
+                                                {doctor.name}
+                                            </h3>
+                                            <p className="text-[#888] text-[13px] mb-4">
+                                                {[
+                                                    doctor.qualification,
+                                                    doctor.experience,
+                                                    doctor.regNo ? `Reg. #${doctor.regNo}` : null
+                                                ].filter(Boolean).join(" · ")}
+                                            </p>
 
-                                        {/* Specialization pills */}
-                                        {doctor.specializations.length > 0 && (
-                                            <div className="flex flex-wrap gap-2 mb-5">
-                                                {visibleSpecs.map((spec, s) => (
-                                                    <span
-                                                        key={s}
-                                                        className="bg-[#c9a84c]/10 border border-[#c9a84c]/20 text-[#c9a84c] text-[11px] font-semibold px-3 py-1 rounded-full"
-                                                    >
-                                                        {spec}
-                                                    </span>
-                                                ))}
-                                                {extraCount > 0 && (
-                                                    <span className="bg-[#c9a84c]/10 border border-[#c9a84c]/20 text-[#c9a84c] text-[11px] font-semibold px-3 py-1 rounded-full">
-                                                        +{extraCount} more
-                                                    </span>
-                                                )}
-                                            </div>
-                                        )}
-
-                                        <div className="border-t border-[#e8e4dc] mb-5" />
-
-                                        <div className="flex gap-3">
-                                            {i === 0 && (
-                                                <a
-                                                    href="#doctor-profile"
-                                                    className="flex-1 border border-[#c9a84c] text-[#c9a84c] font-semibold text-[13px] py-3 rounded-xl text-center hover:bg-[#c9a84c] hover:text-white transition-all duration-200"
-                                                >
-                                                    View Profile
-                                                </a>
+                                            {/* Specialization pills */}
+                                            {doctor.specializations.length > 0 && (
+                                                <div className="flex flex-wrap gap-2 mb-5">
+                                                    {visibleSpecs.map((spec, s) => (
+                                                        <span
+                                                            key={s}
+                                                            className="bg-[#c9a84c]/10 border border-[#c9a84c]/20 text-[#c9a84c] text-[11px] font-semibold px-3 py-1 rounded-full"
+                                                        >
+                                                            {spec}
+                                                        </span>
+                                                    ))}
+                                                    {extraCount > 0 && (
+                                                        <span className="bg-[#c9a84c]/10 border border-[#c9a84c]/20 text-[#c9a84c] text-[11px] font-semibold px-3 py-1 rounded-full">
+                                                            +{extraCount} more
+                                                        </span>
+                                                    )}
+                                                </div>
                                             )}
-                                            <a
-                                                href={doctor.whatsapp}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className={`${i === 0 ? "flex-1" : "w-full"} bg-[#c9a84c] text-white font-bold text-[13px] py-3 rounded-xl text-center hover:bg-[#b8963e] transition-all duration-200`}
-                                            >
-                                                Book Now
-                                            </a>
+                                        </div>
+
+                                        <div className="mt-auto pt-5">
+                                            <div className="border-t border-[#e8e4dc] mb-5" />
+
+                                            <div className="flex gap-3">
+                                                {i === 0 && (
+                                                    <a
+                                                        href="#doctor-profile"
+                                                        className="flex-1 border border-[#c9a84c] text-[#c9a84c] font-semibold text-[13px] py-3 rounded-xl text-center hover:bg-[#c9a84c] hover:text-white transition-all duration-200"
+                                                    >
+                                                        View Profile
+                                                    </a>
+                                                )}
+                                                <a
+                                                    href={doctor.whatsapp}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className={`${i === 0 ? "flex-1" : "w-full"} bg-[#c9a84c] text-white font-bold text-[13px] py-3 rounded-xl text-center hover:bg-[#b8963e] transition-all duration-200`}
+                                                >
+                                                    Book Now
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </motion.div>
