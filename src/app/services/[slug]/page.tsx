@@ -170,39 +170,6 @@ export default function ServiceDetailPage() {
                 </div>
             </section>
 
-            {/* ─── Procedure Steps ─── */}
-            <section className="bg-[#faf9f7] py-20 px-6">
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-12">
-                        <p className="text-[#c9a84c] text-xs tracking-[0.25em] uppercase font-semibold mb-3">
-                            What to Expect
-                        </p>
-                        <h2 className="font-serif font-bold text-[#1a1a1a] text-[36px] leading-tight">
-                            The Procedure
-                        </h2>
-                    </div>
-
-                    <div className="space-y-5">
-                        {service.procedure.map((step, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="flex items-start gap-5 bg-white border border-[#e8e4dc] rounded-2xl p-6"
-                            >
-                                <div className="w-10 h-10 rounded-full bg-[#c9a84c] flex items-center justify-center shrink-0">
-                                    <span className="text-white font-bold text-[15px]">{i + 1}</span>
-                                </div>
-                                <div className="pt-1.5">
-                                    <p className="text-[#1a1a1a] text-[15px] font-medium leading-relaxed">{step}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* ─── CTA ─── */}
             <section className="bg-[#1a1a1a] py-16 px-6 relative overflow-hidden">

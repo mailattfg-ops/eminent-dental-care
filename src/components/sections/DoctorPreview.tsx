@@ -50,7 +50,7 @@ export default function DoctorPreview() {
                             {doctor.name}
                         </h3>
                         <p className="text-[#888] text-sm mb-6 mt-1">
-                            {doctor.qualification} · {doctor.experience}
+                            {[doctor.qualification, doctor.experience].filter(Boolean).join(" · ")}
                         </p>
 
                         <p className="text-[#555] text-[15px] leading-relaxed mb-8 max-w-lg">

@@ -91,7 +91,7 @@ export default function DoctorsPage() {
 
                                         {/* Qualification badge */}
                                         <span className="absolute top-4 right-4 bg-[#c9a84c] text-white text-[10px] font-black uppercase tracking-wider px-3 py-1.5 rounded-full">
-                                            {doctor.qualification} · {doctor.experience}
+                                            {[doctor.qualification, doctor.experience].filter(Boolean).join(" · ")}
                                         </span>
 
                                         {/* Availability badge */}
@@ -112,25 +112,31 @@ export default function DoctorsPage() {
                                             {doctor.name}
                                         </h3>
                                         <p className="text-[#888] text-[13px] mb-4">
-                                            {doctor.qualification} · {doctor.experience} · Reg. #{doctor.regNo}
+                                            {[
+                                                doctor.qualification,
+                                                doctor.experience,
+                                                doctor.regNo ? `Reg. #${doctor.regNo}` : null
+                                            ].filter(Boolean).join(" · ")}
                                         </p>
 
                                         {/* Specialization pills */}
-                                        <div className="flex flex-wrap gap-2 mb-5">
-                                            {visibleSpecs.map((spec, s) => (
-                                                <span
-                                                    key={s}
-                                                    className="bg-[#c9a84c]/10 border border-[#c9a84c]/20 text-[#c9a84c] text-[11px] font-semibold px-3 py-1 rounded-full"
-                                                >
-                                                    {spec}
-                                                </span>
-                                            ))}
-                                            {extraCount > 0 && (
-                                                <span className="bg-[#c9a84c]/10 border border-[#c9a84c]/20 text-[#c9a84c] text-[11px] font-semibold px-3 py-1 rounded-full">
-                                                    +{extraCount} more
-                                                </span>
-                                            )}
-                                        </div>
+                                        {doctor.specializations.length > 0 && (
+                                            <div className="flex flex-wrap gap-2 mb-5">
+                                                {visibleSpecs.map((spec, s) => (
+                                                    <span
+                                                        key={s}
+                                                        className="bg-[#c9a84c]/10 border border-[#c9a84c]/20 text-[#c9a84c] text-[11px] font-semibold px-3 py-1 rounded-full"
+                                                    >
+                                                        {spec}
+                                                    </span>
+                                                ))}
+                                                {extraCount > 0 && (
+                                                    <span className="bg-[#c9a84c]/10 border border-[#c9a84c]/20 text-[#c9a84c] text-[11px] font-semibold px-3 py-1 rounded-full">
+                                                        +{extraCount} more
+                                                    </span>
+                                                )}
+                                            </div>
+                                        )}
 
                                         <div className="border-t border-[#e8e4dc] mb-5" />
 
@@ -199,10 +205,10 @@ export default function DoctorsPage() {
                             <div className="bg-[#c9a84c] rounded-2xl p-4 mt-4 max-w-sm mx-auto lg:mx-0">
                                 <div className="flex justify-around">
                                     {[
-                                        { num: "8+", label: "Years" },
+                                        featured.experience ? { num: featured.experience, label: "Experience" } : null,
                                         { num: "1000+", label: "Patients" },
-                                        { num: `#${featured.regNo}`, label: "Reg No" },
-                                    ].map((s, idx) => (
+                                        featured.regNo ? { num: `#${featured.regNo}`, label: "Reg No" } : null,
+                                    ].filter(Boolean).map((s: any, idx) => (
                                         <div key={idx} className="text-center">
                                             <p className="font-bold text-white text-[20px] leading-none">{s.num}</p>
                                             <p className="text-white/70 text-[10px] uppercase tracking-wider mt-1">{s.label}</p>
@@ -225,7 +231,7 @@ export default function DoctorsPage() {
                                 {featured.name}
                             </h3>
                             <p className="text-[#888] text-[14px] mb-6">
-                                {featured.qualification} · {featured.experience}
+                                {[featured.qualification, featured.experience].filter(Boolean).join(" · ")}
                             </p>
 
                             <p className="text-[#555] text-[15px] leading-relaxed mb-8">
