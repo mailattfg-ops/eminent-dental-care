@@ -35,7 +35,7 @@ export default function Navbar() {
             <div className="w-full flex items-center justify-between">
 
                 {/* LEFT — Logo only */}
-                <Link href="/" className="shrink-0">
+                <Link href="/" className="shrink-0" onClick={() => setIsOpen(false)}>
                     <Image
                         src="/Images/logo.svg"
                         alt="Eminent Dental Care Logo"
