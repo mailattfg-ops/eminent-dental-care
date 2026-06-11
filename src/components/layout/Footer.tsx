@@ -114,7 +114,7 @@ export default function Footer() {
                                 <li>
                                     <a
                                         href={`mailto:${companyDetails.email}`}
-                                        className="hover:text-[#c9a84c] transition-colors duration-200 break-all"
+                                        className="hover:text-[#c9a84c] transition-colors duration-200 whitespace-nowrap"
                                     >
                                         {companyDetails.email}
                                     </a>
