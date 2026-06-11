@@ -141,17 +141,19 @@ export default function DoctorsPage() {
                                         <div className="border-t border-[#e8e4dc] mb-5" />
 
                                         <div className="flex gap-3">
-                                            <a
-                                                href="#doctor-profile"
-                                                className="flex-1 border border-[#c9a84c] text-[#c9a84c] font-semibold text-[13px] py-3 rounded-xl text-center hover:bg-[#c9a84c] hover:text-white transition-all duration-200"
-                                            >
-                                                View Profile
-                                            </a>
+                                            {i === 0 && (
+                                                <a
+                                                    href="#doctor-profile"
+                                                    className="flex-1 border border-[#c9a84c] text-[#c9a84c] font-semibold text-[13px] py-3 rounded-xl text-center hover:bg-[#c9a84c] hover:text-white transition-all duration-200"
+                                                >
+                                                    View Profile
+                                                </a>
+                                            )}
                                             <a
                                                 href={doctor.whatsapp}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex-1 bg-[#c9a84c] text-white font-bold text-[13px] py-3 rounded-xl text-center hover:bg-[#b8963e] transition-all duration-200"
+                                                className={`${i === 0 ? "flex-1" : "w-full"} bg-[#c9a84c] text-white font-bold text-[13px] py-3 rounded-xl text-center hover:bg-[#b8963e] transition-all duration-200`}
                                             >
                                                 Book Now
                                             </a>
