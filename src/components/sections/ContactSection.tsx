@@ -72,6 +72,7 @@ export default function ContactSection() {
                                         <a
                                             href={item.href}
                                             className="font-semibold text-[#1a1a1a] text-[15px] hover:text-[#c9a84c] transition-colors"
+                                            style={item.title === "Email Us" ? { whiteSpace: "nowrap" } : undefined}
                                         >
                                             {item.detail}
                                         </a>

@@ -111,10 +111,11 @@ export default function Footer() {
                                         {companyDetails.phone}
                                     </a>
                                 </li>
-                                <li>
+                                <li style={{ whiteSpace: "nowrap" }}>
                                     <a
                                         href={`mailto:${companyDetails.email}`}
-                                        className="hover:text-[#c9a84c] transition-colors duration-200 whitespace-nowrap"
+                                        className="hover:text-[#c9a84c] transition-colors duration-200"
+                                        style={{ whiteSpace: "nowrap" }}
                                     >
                                         {companyDetails.email}
                                     </a>
