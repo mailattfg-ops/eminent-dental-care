@@ -68,9 +68,6 @@ export default function DoctorsPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {doctors.map((doctor, i) => {
-                            const visibleSpecs = doctor.specializations.slice(0, 3);
-                            const extraCount = doctor.specializations.length - 3;
-
                             return (
                                 <motion.div
                                     key={i}
@@ -120,24 +117,6 @@ export default function DoctorsPage() {
                                                 ].filter(Boolean).join(" · ")}
                                             </p>
 
-                                            {/* Specialization pills */}
-                                            {doctor.specializations.length > 0 && (
-                                                <div className="flex flex-wrap gap-2 mb-5">
-                                                    {visibleSpecs.map((spec, s) => (
-                                                        <span
-                                                            key={s}
-                                                            className="bg-[#c9a84c]/10 border border-[#c9a84c]/20 text-[#c9a84c] text-[11px] font-semibold px-3 py-1 rounded-full"
-                                                        >
-                                                            {spec}
-                                                        </span>
-                                                    ))}
-                                                    {extraCount > 0 && (
-                                                        <span className="bg-[#c9a84c]/10 border border-[#c9a84c]/20 text-[#c9a84c] text-[11px] font-semibold px-3 py-1 rounded-full">
-                                                            +{extraCount} more
-                                                        </span>
-                                                    )}
-                                                </div>
-                                            )}
                                         </div>
 
                                         <div className="mt-auto pt-5">
