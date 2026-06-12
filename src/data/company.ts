@@ -153,7 +153,7 @@ export const services = [
 export const doctors = [
   {
     name: "Dr. Akhila Junoosha C.A",
-    qualification: "BDS",
+    qualification: "",
     experience: "8+ Years",
     role: "Founder & Chief Dental Surgeon",
     regNo: "23647",
@@ -172,7 +172,7 @@ export const doctors = [
   },
   {
     name: "Dr. Meharoos",
-    qualification: "BDS, MDS (Orthodontics)",
+    qualification: "",
     experience: "",
     role: "Orthodontist",
     regNo: "28192",
@@ -221,7 +221,7 @@ export const doctors = [
   },
   {
     name: "Dr. Vidya Vishnu",
-    qualification: "BDS, MDS (Periodontics)",
+    qualification: "",
     experience: "",
     role: "Consultant Periodontist",
     regNo: "",
@@ -257,7 +257,7 @@ export const doctors = [
   },
   {
     name: "Dr. Najroof K",
-    qualification: "BDS, MDS (Pediatric Dentistry)",
+    qualification: "",
     experience: "",
     role: "Pedodontist",
     regNo: "",
