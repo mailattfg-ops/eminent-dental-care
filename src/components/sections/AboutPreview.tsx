@@ -115,12 +115,19 @@ export default function AboutPreview() {
                             >
                                 <Image
                                     src={slideImages[currentIdx]}
-                                    alt={`Eminent Dental Care Clinic Interior ${currentIdx + 1}`}
+                                    alt=""
                                     fill
-                                    className="object-cover"
+                                    className="object-cover blur-md opacity-30 scale-105 select-none pointer-events-none"
                                     priority={currentIdx === 0}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+                                <Image
+                                    src={slideImages[currentIdx]}
+                                    alt={`Eminent Dental Care Clinic Interior ${currentIdx + 1}`}
+                                    fill
+                                    className="object-contain z-10"
+                                    priority={currentIdx === 0}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-15 pointer-events-none" />
                             </motion.div>
                         </AnimatePresence>
 
