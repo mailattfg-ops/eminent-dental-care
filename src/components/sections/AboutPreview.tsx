@@ -14,12 +14,12 @@ const bullets = [
 ];
 
 const slideImages = [
-    "/Images/clinic_1.jpeg",
-    "/Images/clinic_2.jpeg",
-    "/Images/clinic_3.jpeg",
-    "/Images/clinic_4.jpeg",
-    "/Images/clinic_5.jpeg",
-    "/Images/clinic_6.jpeg",
+    "/Images/clinic_1.webp",
+    "/Images/clinic_2.webp",
+    "/Images/clinic_3.webp",
+    "/Images/clinic_4.webp",
+    "/Images/clinic_5.webp",
+    "/Images/clinic_6.webp",
 ];
 
 export default function AboutPreview() {
