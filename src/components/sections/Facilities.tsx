@@ -13,13 +13,6 @@ const bentoConfig = [
         layout: "tall",
     },
     {
-        title: "Comfort First",
-        desc: "Patient-friendly environment.",
-        span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1",
-        image: "/Images/comfort_dental_lobby.webp",
-        layout: "standard",
-    },
-    {
         title: "Digital Planning",
         desc: "Personalized treatment.",
         span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1 lg:row-span-2",
@@ -27,11 +20,11 @@ const bentoConfig = [
         layout: "tall",
     },
     {
-        title: "Comprehensive Treatments",
-        desc: "Preventive, restorative, and aesthetic procedures tailored for you.",
-        span: "col-span-1 md:col-span-4 lg:col-span-2 row-span-1",
-        image: "/Images/macro_aesthetic.webp",
-        layout: "wide",
+        title: "Comfort First",
+        desc: "Patient-friendly environment.",
+        span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1",
+        image: "/Images/comfort_dental_lobby.webp",
+        layout: "standard",
     },
     {
         title: "Pain-Conscious Care",
@@ -39,6 +32,13 @@ const bentoConfig = [
         span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1",
         image: "/Images/gentle_dental_care.webp",
         layout: "standard",
+    },
+    {
+        title: "Comprehensive Treatments",
+        desc: "Preventive, restorative, and aesthetic procedures tailored for you.",
+        span: "col-span-1 md:col-span-4 lg:col-span-2 row-span-1",
+        image: "/Images/macro_aesthetic.webp",
+        layout: "wide",
     },
     {
         title: "Ethical Practice",
