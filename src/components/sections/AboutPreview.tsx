@@ -103,7 +103,7 @@ export default function AboutPreview() {
                     transition={{ duration: 0.8, delay: 0.15 }}
                     className="relative group"
                 >
-                    <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-[#faf9f7] shadow-sm">
+                    <div className="relative aspect-square rounded-3xl overflow-hidden bg-[#faf9f7] shadow-sm">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentIdx}
@@ -117,14 +117,16 @@ export default function AboutPreview() {
                                     src={slideImages[currentIdx]}
                                     alt=""
                                     fill
-                                    className="object-cover blur-md opacity-30 scale-105 select-none pointer-events-none"
+                                    className="blur-md opacity-30 scale-105 select-none pointer-events-none"
+                                    style={{ objectFit: "cover" }}
                                     priority={currentIdx === 0}
                                 />
                                 <Image
                                     src={slideImages[currentIdx]}
                                     alt={`Eminent Dental Care Clinic Interior ${currentIdx + 1}`}
                                     fill
-                                    className="object-contain z-10"
+                                    className="z-10"
+                                    style={{ objectFit: "contain" }}
                                     priority={currentIdx === 0}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-15 pointer-events-none" />
