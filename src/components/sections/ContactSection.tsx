@@ -126,9 +126,10 @@ export default function ContactSection() {
                                 href="https://maps.app.goo.gl/hCiEPj5L5fm1MGBX9"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="absolute bottom-3 right-3 bg-white rounded-xl p-2 shadow-md hover:bg-[#c9a84c] hover:text-white transition-all duration-300 text-[#1a1a1a]"
+                                className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm hover:bg-[#c9a84c] hover:text-white text-[#1a1a1a] px-3 py-2 rounded-xl shadow-md flex items-center gap-1.5 text-[11px] font-bold transition-all duration-300 z-10"
                             >
-                                <ExternalLink size={16} />
+                                <ExternalLink size={13} />
+                                Open in Maps
                             </a>
                         </div>
                     </div>

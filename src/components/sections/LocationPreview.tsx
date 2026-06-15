@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
 import { companyDetails } from "@/data/company";
 
 const infoRows = [
@@ -103,12 +103,11 @@ export default function LocationPreview() {
                         </a>
                     </motion.div>
 
-                    {/* RIGHT — Map iframe */}
                     <motion.div
                         initial={{ opacity: 0, x: 40 }}
                         animate={inView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.7, delay: 0.15 }}
-                        className="rounded-2xl overflow-hidden border border-[#e8e4dc] min-h-[350px] bg-[#faf9f7]"
+                        className="rounded-2xl overflow-hidden border border-[#e8e4dc] min-h-[350px] bg-[#faf9f7] relative group"
                     >
                         <iframe
                             src="https://maps.google.com/maps?q=10.9788733,75.8775864&z=17&output=embed"
@@ -120,6 +119,15 @@ export default function LocationPreview() {
                             referrerPolicy="no-referrer-when-downgrade"
                             title="Eminent Dental Care Location"
                         />
+                        <a
+                            href="https://maps.app.goo.gl/hCiEPj5L5fm1MGBX9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm hover:bg-[#c9a84c] hover:text-white text-[#1a1a1a] px-4 py-2.5 rounded-xl shadow-md flex items-center gap-2 text-[12px] font-bold transition-all duration-300 z-10"
+                        >
+                            <ExternalLink size={14} />
+                            Open in Google Maps
+                        </a>
                     </motion.div>
 
                 </div>
