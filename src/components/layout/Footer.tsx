@@ -40,10 +40,10 @@ export default function Footer() {
                         <div className="col-span-2 lg:col-span-1">
                             <Link href="/" className="inline-block">
                                 <Image
-                                    src="/Images/logo.svg"
+                                    src="/Images/logo.png"
                                     alt="Eminent Dental Care Logo"
-                                    width={52}
-                                    height={52}
+                                    width={100}
+                                    height={100}
                                     className="object-contain"
                                 />
                             </Link>

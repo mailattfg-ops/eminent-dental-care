@@ -11,33 +11,33 @@ const features = [
         delay: 0,
     },
     {
-        icon: Sparkles,
-        title: "Advanced Sterilization",
-        desc: "Autoclave sterilization and strict hygiene for total patient safety",
-        delay: 0.1,
-    },
-    {
         icon: Heart,
         title: "Truly Patient-First",
         desc: "Every treatment decision starts with your comfort and wellbeing",
-        delay: 0.2,
+        delay: 0.1,
     },
     {
         icon: Activity,
         title: "Evidence-Based Treatments",
         desc: "Modern scientifically-backed dental methods and techniques only",
-        delay: 0.3,
+        delay: 0.2,
     },
     {
         icon: Star,
         title: "Family and Child-Friendly",
         desc: "A calm welcoming space designed for patients of all ages",
-        delay: 0.4,
+        delay: 0.3,
     },
     {
         icon: MonitorSmartphone,
         title: "Digital Treatment Planning",
         desc: "Personalized care using modern diagnostic technology",
+        delay: 0.4,
+    },
+    {
+        icon: Sparkles,
+        title: "Advanced Sterilization",
+        desc: "Autoclave sterilization and strict hygiene for total patient safety",
         delay: 0.5,
     },
 ];

@@ -63,9 +63,9 @@ export const metadata: Metadata = {
         },
     },
     icons: {
-        icon: "/Images/logo.svg",
-        shortcut: "/Images/logo.svg",
-        apple: "/Images/logo.svg",
+        icon: "/Images/logo.png",
+        shortcut: "/Images/logo.png",
+        apple: "/Images/logo.png",
     },
 };
 
@@ -78,7 +78,7 @@ export default function RootLayout({
         "@context": "https://schema.org",
         "@type": "Dentist",
         "name": "Eminent Dental Care",
-        "image": "https://www.eminentdentalcare.com/Images/logo.svg",
+        "image": "https://www.eminentdentalcare.com/Images/logo.png",
         "@id": "https://www.eminentdentalcare.com",
         "url": "https://www.eminentdentalcare.com",
         "telephone": "+919037247022",

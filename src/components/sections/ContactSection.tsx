@@ -115,7 +115,7 @@ export default function ContactSection() {
                         {/* Google Map */}
                         <div className="relative h-52 rounded-2xl overflow-hidden border border-[#e8e4dc]">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.123456789!2d75.86720!3d10.98840!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDU5JzE4LjIiTiA3NcKwNTInMDIuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                                src="https://maps.google.com/maps?q=Eminent%20Dental%20Care%20Tanur%20Malappuram&z=17&output=embed"
                                 width="100%"
                                 height="100%"
                                 title="Eminent Dental Care location"
@@ -123,7 +123,7 @@ export default function ContactSection() {
                                 className="absolute inset-0 border-0"
                             />
                             <a
-                                href="https://maps.google.com/?q=Tanur,+Malappuram,+Kerala+676302"
+                                href="https://maps.app.goo.gl/vruBRtqCjiT2TDWJA"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="absolute bottom-3 right-3 bg-white rounded-xl p-2 shadow-md hover:bg-[#c9a84c] hover:text-white transition-all duration-300 text-[#1a1a1a]"

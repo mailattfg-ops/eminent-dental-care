@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Clock, MapPin } from "lucide-react";
+import { Clock, MapPin, Phone } from "lucide-react";
 import { companyDetails } from "@/data/company";
 
 export default function Hero() {
@@ -46,10 +46,23 @@ export default function Hero() {
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.9, delay: 0.15 }}
-                            className="text-[42px] md:text-[78px] lg:text-[90px] leading-[1.1] tracking-[-0.02em] mb-8"
+                            className="text-[54px] md:text-[64px] lg:text-[72px] leading-[1.15] tracking-[-0.02em] mb-8"
                         >
-                            <span className="block text-white font-light">Your Smile,</span>
-                            <span className="block text-[#c9a84c] font-bold italic font-serif">Perfected.</span>
+                            {/* Desktop/Tablet view: Single line */}
+                            <span className="hidden md:block text-white font-light">
+                                {companyDetails.name}, <span className="text-[#c9a84c] font-bold italic font-serif">{companyDetails.city}</span>
+                            </span>
+                            {/* Mobile view: Two lines */}
+                            <span className="block md:hidden text-white font-light leading-tight">
+                                <span className="block whitespace-nowrap">Eminent Dental</span>
+                                <span className="block mt-1 whitespace-nowrap">
+                                    Care, <span className="text-[#c9a84c] font-bold italic font-serif">{companyDetails.city}</span>
+                                </span>
+                            </span>
+                            <span className="flex items-center gap-3 text-white font-semibold text-[22px] md:text-[34px] lg:text-[38px] mt-4 tracking-wider">
+                                <Phone className="text-[#c9a84c] shrink-0 w-6 h-6 md:w-8 md:h-8" />
+                                <span>+91 90372 47022</span>
+                            </span>
                         </motion.h1>
 
                         {/* Subtext */}

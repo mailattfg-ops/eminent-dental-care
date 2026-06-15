@@ -37,15 +37,15 @@ export default function Navbar() {
                 {/* LEFT — Logo only */}
                 <a
                     href="/"
-                    className="shrink-0 block w-16 h-16 relative z-50 pointer-events-auto"
+                    className="shrink-0 block w-20 h-20 relative z-50 pointer-events-auto"
                     onClick={() => setIsOpen(false)}
                 >
                     <Image
-                        src="/Images/logo.svg"
+                        src="/Images/logo.png"
                         alt="Eminent Dental Care Logo"
-                        width={64}
-                        height={64}
-                        className="object-contain w-16 h-16 cursor-pointer"
+                        width={80}
+                        height={80}
+                        className="object-contain w-20 h-20 cursor-pointer"
                         priority
                     />
                 </a>

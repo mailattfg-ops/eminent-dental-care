@@ -153,7 +153,7 @@ export const services = [
 export const doctors = [
   {
     name: "Dr. Akhila Junoosha C.A",
-    qualification: "",
+    qualification: "BDS",
     experience: "8+ Years",
     role: "Founder & Chief Dental Surgeon",
     regNo: "23647",
@@ -172,7 +172,7 @@ export const doctors = [
   },
   {
     name: "Dr. Meharoos",
-    qualification: "",
+    qualification: "BDS, MDS (Orthodontics)",
     experience: "",
     role: "Orthodontist",
     regNo: "28192",
@@ -209,19 +209,26 @@ export const doctors = [
   },
   {
     name: "Dr. Vipindas A P",
-    qualification: "",
+    qualification: "BDS, MDS (Oral & Maxillofacial Surgery)",
     experience: "",
     role: "Consultant maxillofacial surgeon and implantologist",
     regNo: "",
-    specializations: [],
-    bio: "",
+    specializations: [
+      "Maxillofacial Surgery",
+      "Dental Implants",
+      "Surgical Extractions",
+      "Wisdom Tooth Surgery",
+      "Jaw Reconstruction",
+      "Implantology",
+    ],
+    bio: "Dr. Vipindas A P is a consultant maxillofacial surgeon and implantologist. He specializes in advanced surgical procedures, dental implants, and corrective jaw treatments with a focus on patient comfort and optimal clinical outcomes.",
     image: "/Images/dr_vipindas.jpg",
     whatsapp: "https://wa.me/919037247022",
     phone: "tel:9037247022",
   },
   {
     name: "Dr. Vidya Vishnu",
-    qualification: "",
+    qualification: "BDS, MDS (Periodontics)",
     experience: "",
     role: "Consultant Periodontist",
     regNo: "",
@@ -257,7 +264,7 @@ export const doctors = [
   },
   {
     name: "Dr. Najroof K",
-    qualification: "",
+    qualification: "BDS, MDS (Pediatric Dentistry)",
     experience: "",
     role: "Pedodontist",
     regNo: "",
