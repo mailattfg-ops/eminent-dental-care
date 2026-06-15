@@ -93,7 +93,7 @@ export default function LocationPreview() {
                         </div>
 
                         <a
-                            href="https://maps.app.goo.gl/vruBRtqCjiT2TDWJA"
+                            href="https://maps.app.goo.gl/hCiEPj5L5fm1MGBX9"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 border-2 border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-white font-semibold text-[13px] uppercase tracking-widest px-8 py-3.5 rounded-full transition-all duration-300 self-start"
@@ -111,7 +111,7 @@ export default function LocationPreview() {
                         className="rounded-2xl overflow-hidden border border-[#e8e4dc] min-h-[350px] bg-[#faf9f7]"
                     >
                         <iframe
-                            src="https://maps.google.com/maps?q=Eminent%20Dental%20Care%20Tanur%20Malappuram&z=17&output=embed"
+                            src="https://maps.google.com/maps?q=10.9788733,75.8775864&z=17&output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0, minHeight: "350px" }}
